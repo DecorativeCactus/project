@@ -1,0 +1,43 @@
+.links {
+	widows: 100%;
+	margin: 0 auto;
+	background-color: #1B1B1B;
+}
+
+.links__wrapper {
+	margin: 0px 10px;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+}
+
+.links__img {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0px 29px 0px;
+}
+
+.links__img-item {
+	display: inline-block;
+}
+
+.links__list {
+	margin-bottom: 69px;
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+
+	@media (max-width:$mobileSmall) {
+		gap: 17px;
+	}
+}
+
+.links__list-item {
+	display: inline-block;
+	font-family: 'Gothic A1';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 11px;
+	line-height: 20px;
+	color: #6B6B6B;
+}

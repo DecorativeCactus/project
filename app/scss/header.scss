@@ -1,0 +1,185 @@
+body {
+	margin: 0px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+.header {
+	z-index: 100;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+
+	// .header__container
+
+	&__container {
+		max-width: 100%;
+		padding: 0 10%;
+		display: flex;
+		min-height: 6.25rem;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0 auto;
+	}
+
+	// .header__list
+
+	&__list {
+		font-family: Gothic A1;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20px;
+		display: flex;
+		gap: 30px;
+	}
+
+	// .header__list-item
+
+	&__list-item {
+		@media (min-width:$mobile) {
+			transition: all 0.4s;
+
+			&:hover {
+				opacity: .6;
+			}
+		}
+	}
+
+	// .header__list-link
+
+
+
+	.logo {
+		display: block;
+		width: calc(120 / 1150 * 100%);
+		min-width: 90px;
+
+
+		// .logo__img
+
+		&__img {
+			max-width: 100%;
+		}
+	}
+
+	.menu {
+
+		// .menu__icon
+
+		&__icon {
+			z-index: 100000;
+			display: none;
+			position: absolute;
+			top: 50%;
+			right: 35px;
+			padding: 8px 0px;
+			transform: translateY(-50%);
+
+			span {
+				transition: all 0.4s;
+
+				position: relative;
+				display: block;
+				width: 30px;
+				height: 2.3px;
+				background: #ffffff;
+
+				&::after,
+				&::before {
+					transition: all 0.4s;
+					content: "";
+					position: absolute;
+					width: 30px;
+					height: 2.3px;
+					background: #ffffff;
+				}
+
+				&::after {
+					right: 0px;
+					top: -8px;
+				}
+
+				&::before {
+					right: 0px;
+					bottom: -8px;
+				}
+			}
+		}
+	}
+
+	@media (max-width:$mobile) {
+		&__list {
+			display: none;
+		}
+
+		.menu {
+			&__icon {
+				display: block;
+			}
+		}
+
+	}
+}
+
+.open-menu {
+	overflow: hidden;
+
+	.menu {
+		&__icon {
+			span {
+				width: 0;
+
+
+				&::before {
+					top: calc(50% - 9px);
+					transform: rotate(-45deg);
+				}
+
+				&::after {
+					bottom: calc(50% - 10px);
+					transform: rotate(45deg);
+				}
+			}
+
+
+		}
+	}
+
+	.header {
+		&__list {
+			box-sizing: border-box;
+			padding: 30px 15px;
+			font-size: 6vw;
+			gap: 50px;
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			left: 0px;
+			background: #1B1B1B;
+			height: 100vh;
+			width: 50vw;
+			top: 0px;
+		}
+
+		&__body {
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: #1b1b1bde;
+		}
+	}
+
+	@media (max-width:$mobileSmall) {
+		.header {
+			&__list {
+				width: 75vw;
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+.data {
+	padding: 0px 33px 160px 33px;
+
+	// .data__flex
+
+	&__flex {
+		display: flex;
+		justify-content: center;
+		gap: 160px;
+
+		@media (max-width:1158px) {
+			gap: 100px;
+		}
+
+		@media (max-width:$pc) {
+			gap: 70px;
+		}
+
+		@media (max-width:$mobile) {
+			flex-direction: column;
+		}
+	}
+
+
+	// .data__number
+
+	&__number {
+		margin-bottom: 10px;
+		font-family: 'Gothic A1';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 59px;
+		line-height: 153%;
+		text-align: center;
+	}
+
+	// .data__discr
+
+	&__discr {
+		font-family: 'Gothic A1';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 133%;
+		text-align: center;
+		color: #000000;
+
+	}
+}

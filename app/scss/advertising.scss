@@ -1,0 +1,16 @@
+.advertising {
+	width: 100%;
+	margin: 0 auto;
+
+	@media (max-width:$mobile) {
+		display: none;
+	}
+
+	@media (max-width:$mobileSmall) {
+		display: none;
+	}
+}
+
+.advertising__img {
+	width: 100%;
+}

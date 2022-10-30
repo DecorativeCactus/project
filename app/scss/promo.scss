@@ -1,0 +1,92 @@
+.promo {
+	position: relative;
+	height: 100vh;
+	background: linear-gradient(287.15deg, #450e4b 0, #3c0c41 24.48%, rgba(207, 0, 99, 0) 100%), #cf0063;
+	box-sizing: border-box;
+	// .promo__container
+
+	&__container {
+		background: url(../img/bg/fone.png) right bottom no-repeat;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		display: flex;
+		max-width: 100%;
+		padding: 0 10%;
+		min-height: 6.25rem;
+		margin: 0 auto;
+
+		@media (max-width:1400px) {
+			background: none;
+		}
+
+
+	}
+
+	// .promo__title
+
+	&__title {
+		transform: rotateY(-100px);
+		margin: 0px 0px 10px 0px;
+		font-family: "Gothic A1";
+		font-size: 80px;
+		font-weight: 400;
+		line-height: 1;
+		color: #FFFFFF;
+
+		@media (max-width:$tablet) {
+			font-size: 50px;
+		}
+
+		@media (max-width:$mobileSmall) {
+			font-size: 40px;
+		}
+	}
+
+	// .promo__subtitle
+
+	&__subtitle {
+		transform: rotateY(-100px);
+		margin-bottom: 25px;
+		font-family: "Gothic A1";
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 167%;
+		color: #FFFFFF;
+
+		@media (max-width:$tablet) {
+			font-size: 25px;
+		}
+
+		@media (max-width:$mobile) {
+			font-size: 20px;
+		}
+
+		@media (max-width:$mobileSmall) {
+			font-size: 13px;
+		}
+	}
+
+	// .promo__button
+
+	&__button {
+		transform: rotateY(-100px);
+		display: inline;
+		flex: 0 0;
+		padding: 20px 40px;
+		background: $main-color;
+		font-family: "Gothic A1";
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 26px;
+	}
+
+	.arrow {
+		position: absolute;
+		left: 50%;
+		bottom: 30px;
+		width: 9px;
+		height: 40px;
+		background: url(../img/icon/arrow.png) no-repeat center/cover;
+	}
+}
